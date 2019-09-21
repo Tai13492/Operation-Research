@@ -16,6 +16,7 @@ x1 + 2x2 <= 6
 x2 <=2
 x1,x2 >=0
 """
+
 def compute_max(x1,x2):
     return 5*x1 + 4*x2
 
@@ -27,7 +28,7 @@ c3 = 1 + X
 c4 = [2] * X.shape[0]
 
 e1 = np.minimum(c3,c4)
-e2 = np.minimum(c2,c4)
+e2 = np.minimum(c2,c3)
 e3 = np.minimum(c1,c2)
 
 e4 = np.minimum(e1,e2)
