@@ -21,33 +21,38 @@ def compute_max(x1,x2):
 
 X = np.arange(0,5,1)
 
-Constraint_One = 6 - (1.5)*X
-Constraint_Two = 3 - (0.5)*X
-Constraint_Three = 1 + X
-Constraint_Four = [2] * X.shape[0]
+c1 = 6 - (1.5)*X
+c2 = 3 - (0.5)*X
+c3 = 1 + X
+c4 = [2] * X.shape[0]
+
+e1 = np.minimum(c3,c4)
+e2 = np.minimum(c2,c4)
+e3 = np.minimum(c1,c2)
+
+e4 = np.minimum(e1,e2)
+e5 = np.minimum(e2,e3)
+
+e6 = np.minimum(e4,e5)
 
 plt.title("Graphical Solution for Linear Programming")
 plt.xlabel("x1")
 plt.ylabel("x2")
 
-plt.plot(X,Constraint_One,'red')
+plt.plot(X,c1,'red')
 #plt.legend("x2 = 6 - 1.5x1")
-plt.plot(X,Constraint_Two,'blue')
+plt.plot(X,c2,'blue')
 #plt.legend("x2 = 3 - 0.5x1")
-plt.plot(X,Constraint_Three,'green')
+plt.plot(X,c3,'green')
 #plt.legend("x2 = 1 + x1")
-plt.plot(X,Constraint_Four,'yellow')
+plt.plot(X,c4,'pink')
 #plt.legend("x2 = 2")
 plt.ylim(0,4)
 
-#y12 = np.minimum(Constraint_One,Constraint_Two)
-plt.fill_between(X,Constraint_One,alpha=0.5)
-plt.fill_between(X,Constraint_Two,alpha=0.5)
-plt.fill_between(X,Constraint_Three,alpha=0.5)
-plt.fill_between(X,Constraint_Four,alpha=0.5)
-#plt.fill_between(X,Constraint_One,Constraint_Two,Constraint_Three,Constraint_Four,color="grey",alpha=0.5)
+plt.fill_between(X,e6)
 
 plt.show()
+
 
 print(compute_max(0,0),(0,0))
 print(compute_max(0,1),(0,1))
