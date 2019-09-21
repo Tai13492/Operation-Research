@@ -6,25 +6,25 @@ Created on Fri Sep 20 22:29:22 2019
 """
 
 print "integers from 1 to 50 divisible by 11:",
-for i in range(1,50):
+for i in range(1,51):
     if(i%11 == 0):
         print i,
 print("")
 
 print "integers from 1 to 30 divisible by 5 or 7:",
-for i in range(1,30):
+for i in range(1,31):
     if(i%5 == 0 or i%7==0):
         print i,
 print("")
 
 print "integers from 1 to 30 divisible by 2 and 7:",
-for i in range(1,30):
+for i in range(1,31):
     if(i%2 == 0 and i%7 == 0):
         print i,
 print("")
 
 print "integers from 1 to 20 not divisible by 2 nor 7:",
-for i in range(1,20):
+for i in range(1,21):
     if(i%2 != 0 and i%7 != 0):
         print i,
 print("")
