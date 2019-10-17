@@ -1,0 +1,75 @@
+
+Gurobi 8.1.1 (win64, Python) logging started 10/17/19 18:39:42
+
+Academic license - for non-commercial use only
+Optimize a model with 4 rows, 2 columns and 7 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 6e+00]
+  Objective range  [4e+00, 5e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 2e+01]
+Presolve removed 1 rows and 0 columns
+Presolve time: 0.03s
+Presolved: 3 rows, 2 columns, 6 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4000000e+01   1.200000e+01   0.000000e+00      0s
+       3    2.1000000e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 3 iterations and 0.06 seconds
+Optimal objective  2.100000000e+01
+Optimize a model with 4 rows, 2 columns and 7 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 6e+00]
+  Objective range  [4e+00, 5e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 2e+01]
+Presolve removed 1 rows and 0 columns
+Presolve time: 0.01s
+Presolved: 3 rows, 2 columns, 6 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.4000000e+01   1.200000e+01   0.000000e+00      0s
+       3    2.1000000e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 3 iterations and 0.02 seconds
+Optimal objective  2.100000000e+01
+Optimize a model with 11 rows, 19 columns and 44 nonzeros
+Model has 12 quadratic objective terms
+Variable types: 0 continuous, 19 integer (3 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+08]
+  Objective range  [4e+00, 7e+01]
+  QObjective range [2e+00, 2e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 8e+01]
+Found heuristic solution: objective 925.0000000
+Presolve time: 0.02s
+Presolved: 23 rows, 31 columns, 80 nonzeros
+Variable types: 0 continuous, 31 integer (3 binary)
+
+Root relaxation: objective 1.740000e+02, 19 iterations, 0.00 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0  174.00000    0    5  925.00000  174.00000  81.2%     -    0s
+H    0     0                     675.0000000  174.00000  74.2%     -    0s
+H    0     0                     623.0000000  174.00000  72.1%     -    0s
+     0     0  530.00000    0   11  623.00000  530.00000  14.9%     -    0s
+     0     0  549.00000    0    2  623.00000  549.00000  11.9%     -    0s
+     0     0  559.00000    0    2  623.00000  559.00000  10.3%     -    0s
+     0     0     cutoff    0       623.00000  623.00000  0.00%     -    0s
+
+Cutting planes:
+  MIR: 13
+  StrongCG: 1
+  Flow cover: 3
+
+Explored 1 nodes (40 simplex iterations) in 0.12 seconds
+Thread count was 8 (of 8 available processors)
+
+Solution count 3: 623 675 925 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.230000000000e+02, best bound 6.230000000000e+02, gap 0.0000%
