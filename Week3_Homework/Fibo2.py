@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Sep 27 16:48:07 2019
-
-@author: TaiT_
-"""
 def fib_recursive(n,memory):
     if memory[n] is not None:
         result = memory[n]
@@ -15,22 +10,23 @@ def fib_recursive(n,memory):
     return result
 
 
-def fib (n):
+def fibo2 (n):
     if n == 1:
-        print 1
+        return [1]
     elif n == 2:
-        print 1, 1
+        return [1,1]
     else:
-        print 1, 1,
         memory = [None] * (n+1)
         fib_recursive(n,memory)
-        print(memory)
-        for i in memory:
-            if i is not None:
-                print i,
+        res = list(filter(None, memory))
+        res = [1,1] + res
+        return res
         
 
+if __name__== "__main__":
+    fibo_n = input("Please input the term n for the Fibonacci sequence: ")
+    fib_num = fibo2(fibo_n)
+    print "The Fibonacci sequence = "
+    print fib_num
 
-fibo_n = input("Please input the term n for the Fibonacci sequence: ")
-print "The Fibonacci sequence = "
-fib(fibo_n)
+
