@@ -55,6 +55,7 @@ for i in nodes:
     if i != nodes[N-1]:
         u[i] = m.addVar(obj=0, name='u_%s' % i)
 
+
 m.update()
 
 
